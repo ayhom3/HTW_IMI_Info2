@@ -1,4 +1,4 @@
-public class Sorting {
+public class selectionSort {
      public static int findMinIndex(int[] a) {
             if (a == null || a.length == 0) {
                 return -1;
@@ -6,7 +6,7 @@ public class Sorting {
 
             int min = 0;
             for(int i = 1; i < a.length; i++) {
-                // 2. Direkt bei i = 1 starten, spart den unnötigen ersten Vergleich.
+                // Direkt bei i = 1 starten, spart den unnötigen ersten Vergleich.
                 if(a[min] > a[i]) {
                     min = i;
                 }
@@ -41,7 +41,7 @@ public class Sorting {
 
     // inline findMinIndexInRange and swap
     public static void selectionSort(int[] a){
-         for(int king = 0; king < a.length; king++) {
+         for(int king = 0; king < a.length - 1; king++) {
              int jack = king;
              for(int queen = king + 1; queen < a.length; queen++) {
                  if(a [ jack ] > a [ queen] ) {
@@ -53,6 +53,8 @@ public class Sorting {
               a [ jack ] = temp;
          }
     }
+
+
 }
 
 
