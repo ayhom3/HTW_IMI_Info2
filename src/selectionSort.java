@@ -6,7 +6,6 @@ public class selectionSort {
 
             int min = 0;
             for(int i = 1; i < a.length; i++) {
-                // Direkt bei i = 1 starten, spart den unnötigen ersten Vergleich.
                 if(a[min] > a[i]) {
                     min = i;
                 }
@@ -53,8 +52,6 @@ public class selectionSort {
               a [ jack ] = temp;
          }
     }
-
-
 }
 
 

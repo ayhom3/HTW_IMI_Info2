@@ -17,6 +17,7 @@ public class u01 {
         return true;
     }
 
+
     // -Exercise 1-2 Guessing Number
 
     // a) How many guesses does B need at most to win the game? Why?
@@ -32,7 +33,7 @@ public class u01 {
 // 1. Generate a random secret integer between 1 and 10000 (inclusive).
 //    Math.random() * 10000 gives 0.0 to 9999.999..., (int) truncates to 0..9999,
 //    and + 1 shifts the range to 1..10000.
-        int randomNum = (int)(Math.random() * 10000) + 1;
+        int randomNum = (int) (Math.random() * 10000) + 1;
 
 // 2. Create a Scanner to read integer guesses typed by the user (B) in the terminal
         Scanner sc = new Scanner(System.in);
@@ -54,4 +55,10 @@ public class u01 {
             }
         }
     }
+
+    //Exercise 1-3 Index
+    //Implement a method int indexOf(int[] a, int n) which returns the one index i such that
+    //a[i] == n. If no such index exists, the method should return -1. You can assume that the
+    //parameter a[] is sorted.
+    //What is the fastest way to achieve this task?
 }
