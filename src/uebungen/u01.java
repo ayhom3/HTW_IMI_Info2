@@ -56,9 +56,43 @@ public class u01 {
         }
     }
 
-    //Exercise 1-3 Index
+    //Exercise 1-3 IndexOf
+
     //Implement a method int indexOf(int[] a, int n) which returns the one index i such that
     //a[i] == n. If no such index exists, the method should return -1. You can assume that the
     //parameter a[] is sorted.
     //What is the fastest way to achieve this task?
+
+    public static int indexOf(int[] a, int n) {
+        int left = 0;
+        int right = a.length - 1;
+
+        while (left <= right) {
+
+            int mid = left + (right - left) / 2;
+            if (a[mid] == n) {
+
+                System.out.println("found it, your n is at index: " + a[mid]);
+                {
+                    return mid;
+                }
+            } else if (a[mid] > n) {
+                right = mid - 1;
+
+            } else {
+                left = mid + 1;
+            }
+        }
+        return -1;
+    }
+
+    public static int sum(int n) {
+
+        // using Gauss's formula
+        int sumOfN = n * ( n + 1) / 2;
+        return sumOfN;
+    }
+
+
+
 }
